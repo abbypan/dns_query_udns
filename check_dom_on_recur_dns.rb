@@ -7,12 +7,18 @@ name = ARGV[0]
 ns_list = File.readlines(ARGV[1])
 times =ns_list.length
 
+max_sec =  20*60;
+now_sec = 0;
+
+
 EM.set_max_timers 100000
 EM.run do
 
-  second = 0
-  EM.add_periodic_timer(1) {
-    #      puts "[#{second += 1}] - active queries: #{resolver.active}"
+  EM.add_periodic_timer(10) {
+        now_sec += 10;
+        if now_sec > max_sec
+            exit
+        end
   }
 
   sent = 0
