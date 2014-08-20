@@ -5,6 +5,8 @@ code almost from [em-udns](https://github.com/ibc/em-udns)
 
 ## install (for example on debian) 
 
+    sudo apt-get update
+
     sudo apt-get install build-essential
 
     sudo apt-get install ruby ruby-dev ruby-eventmachine
