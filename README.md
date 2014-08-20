@@ -5,14 +5,17 @@ code almost from [em-udns](https://github.com/ibc/em-udns)
 
 ## install (for example on debian) 
 
-{% highlight bash %}    
-sudo apt-get install build-essential
-sudo apt-get install ruby ruby-dev ruby-eventmachine
-sudo apt-get install udns-utils libudns-dev libudns0
-sudo gem sources --remove http://rubygems.org/
-sudo gem sources -a http://ruby.taobao.org/
-sudo gem install em-udns
-{% endhighlight %}
+    sudo apt-get install build-essential
+
+    sudo apt-get install ruby ruby-dev ruby-eventmachine
+
+    sudo apt-get install udns-utils libudns-dev libudns0
+
+    sudo gem sources --remove http://rubygems.org/
+
+    sudo gem sources -a http://ruby.taobao.org/
+
+    sudo gem install em-udns
 
 ## usage
 
