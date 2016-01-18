@@ -1,5 +1,5 @@
-check_dom_on_recur_dns
-======================
+dns_query_udns
+==============
 
 code almost from [em-udns](https://github.com/ibc/em-udns)
 
@@ -13,17 +13,21 @@ code almost from [em-udns](https://github.com/ibc/em-udns)
 
     sudo apt-get install udns-utils libudns-dev libudns0
 
-    sudo gem sources --remove http://rubygems.org/
+    sudo gem sources --remove https://rubygems.org/
 
-    sudo gem sources -a http://ruby.taobao.org/
+    sudo gem sources -a https://ruby.taobao.org/
 
     sudo gem install em-udns
 
 ## usage
 
-    ./check_dom_on_recur_dns.rb [domain] [recur_dns_file]
+    ./dns_query_dom_multi_recur.rb [domain] [recur_dns_file]
 
-    ./check_dom_on_recur_dns.rb www.google.com recur.txt > result.txt
+    ./dns_query_dom_multi_recur.rb www.google.com recur.txt > recur-google.com.txt
+
+    ./dns_query_recur_multi_dom.rb [recur] [domain_file]
+
+    ./dns_query_recur_multi_dom.rb 8.8.8.8 dom.txt > dom-8.8.8.8.txt
     
     
-it's ok when recur.txt line count <= 1000，just dig A record
+it's ok when recur.txt/dom.txt line count <= 1000，just dig A record
